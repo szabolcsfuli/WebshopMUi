@@ -1,6 +1,6 @@
 import React from 'react'
 import Product from './Product'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 import { DUMMY_MEALS } from '../../data'
 import styles from '../../styles/styles'
 

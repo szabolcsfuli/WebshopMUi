@@ -2,9 +2,9 @@ import React from 'react'
 import { Text, View, Image } from 'react-native'
 import styles from '../styles/styles'
 import mealsImg from '../assets/meals.jpg'
-import { Flex, Wrap, Box, VStack } from '@react-native-material/core'
+import { Wrap, Box } from '@react-native-material/core'
 
-export default ({ navigation }) => {
+export default () => {
   return (
     <View style={styles.view}>
       <Wrap>
