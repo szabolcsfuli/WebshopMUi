@@ -1,6 +1,6 @@
 import styles from '../../styles/styles'
 import { Text } from 'react-native'
-import { Wrap, Box, Flex } from '@react-native-material/core'
+import { Wrap, Box } from '@react-native-material/core'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Price from '../product/Price'
 import { CART_COLOR } from '../../styles'
@@ -19,19 +19,19 @@ export default ({ index, item }) => {
 
   return (
     <Wrap m={10} items='center' spacing={4}>
-      <Flex>
-        <Text style={{color: 'grey'}}>{index}</Text>
-      </Flex>
-      <Flex fill>
+      <Box>
+        <Text style={{ color: 'grey' }}>{index}</Text>
+      </Box>
+      <Box style={{flex: 1}}>
         <Text style={styles.p}>{item.name}</Text>
-      </Flex>
-      <Flex fill>
+      </Box>
+      <Box style={{flex: 1}}>
         <Price price={item.price} />
-      </Flex>
+      </Box>
       <Wrap fill justify='center'>
         <Text style={styles.p}>{item.count}</Text>
       </Wrap>
-      <Wrap>
+      <Wrap >
         <Icon
           name='arrow-up-drop-circle'
           size={25}

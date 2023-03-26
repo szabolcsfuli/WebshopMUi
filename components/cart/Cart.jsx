@@ -10,7 +10,7 @@ export default () => {
   const ctx = useContext(CartContext)
   return (
     <View style={styles.view}>
-      <ScrollView style={{ height: 10 }}>
+      <ScrollView >
         {ctx.items.map((item, index) => (
           <CartItem key={item.id} index={index + 1} item={item}></CartItem>
         ))}
