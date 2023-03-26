@@ -2,8 +2,8 @@ import { useReducer } from 'react'
 import CartContext from './CartContext'
 import React from 'react'
 
-const cartReducer = (state: any, action: any) => {
-  let index = state.items.findIndex((item: any) => {
+const cartReducer = (state, action) => {
+  let index = state.items.findIndex((item) => {
     return item.id === action.item.id
   })
   let item = index > -1 ? state.items[index] : null
@@ -32,7 +32,7 @@ const cartReducer = (state: any, action: any) => {
   state.totalItems = 0
   state.totalAmount = 0
 
-  state.items.map((item: any) => {
+  state.items.map((item) => {
     state.totalCount += item.count
     state.totalItems += 1
     state.totalAmount += item.price * item.count
@@ -41,7 +41,7 @@ const cartReducer = (state: any, action: any) => {
   return { ...state }
 }
 
-const CartProvider = (props: any) => {
+const CartProvider = (props) => {
   const defaultReducerState = {
     items: [],
     totalCount: 0,
@@ -55,13 +55,13 @@ const CartProvider = (props: any) => {
     totalAmount: reducer.totalAmount,
     totalItems: reducer.totalItems,
     totalCount: reducer.totalCount,
-    addItem: (item: object) => {
+    addItem: (item) => {
       dispatch({
         type: 'ADD',
         item: item
       })
     },
-    removeItem: (item: object) => {
+    removeItem: (item) => {
       dispatch({
         type: 'REMOVE',
         item: item
