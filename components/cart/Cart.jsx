@@ -20,7 +20,7 @@ export default () => {
           <Text style={styles.total}>Total Price</Text>
           <Price price={ctx.totalAmount} cls='totalPrice' />
         </Box>
-      </VStack>
+      </VStack> 
     </View>
   )
 }
